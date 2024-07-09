@@ -4,15 +4,21 @@
     font-family: 'ExampleFont';
     src: url('font/SFPRODISPLAYREGULAR.otf') format('opentype');
 }
+:root {
+    --bg-color1: #06f1ba;
+    --bg-color2: #23a6d5;
+    --bg-color3: #d680f8;
+    --text-color: #0a0a45;
+}
 
 body{
     /* font-family: "Playwrite PT", sans-serif; */
     font-family: "SF", sans-serif;
     margin: 0;
     padding: 0;
-    color: rgb(10, 21, 53);
-    background: linear-gradient(-45deg, #06f1ba, #23a6d5, #d680f8);
-	background-size: 400% 400%;
+    color: var(--text-color);
+    background: linear-gradient(-45deg, var(--bg-color1), var(--bg-color2), var(--bg-color3));
+	background-size: 4000% 4000%;
 	animation: gradient 15s ease infinite;
 	height: 100vh;
     /* overflow: hidden; */
@@ -116,7 +122,7 @@ header nav a:hover {
 }
 .about_me_body p{
     padding: 10px;
-    color: #dfbdb7;
+    color: #dbdbdb;
     grid-column: 1 / 2;
 }
 .me {
@@ -131,7 +137,7 @@ header nav a:hover {
     grid-column: 1 / 9; 
     grid-row: 1 / 4; 
     font-size: 1.5em;
-    background-color: rgb(29, 1, 25);
+    background-color: rgb(28, 28, 28);
     color: #8dccbd;
     border-radius: 30px;
     padding: 10px;
