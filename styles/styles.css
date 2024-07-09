@@ -23,9 +23,9 @@ body{
 	height: 100vh;
     /* overflow: hidden; */
 }
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
     display: none;
-}
+} */
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -65,9 +65,9 @@ header .slider{
     outline: none;
     /* background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red); */
 }
-#color-slider::-webkit-slider-runnable-track {
+/* #color-slider::-webkit-slider-runnable-track {
     background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
-}
+} */
 header nav a {
     color: white;
     text-decoration: none;
