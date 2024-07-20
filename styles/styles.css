@@ -329,3 +329,17 @@ iframe {
     grid-column: 2/3;
     grid-row: 1;
 }
+
+/* Art page*/
+.container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    padding: 30px;
+    justify-content: center;
+}
+.container h1 {
+    text-align: center;
+    font-size: 4em;
+    font-family: "Playwrite PT", sans-serif;
+}
