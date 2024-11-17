@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>Henrik Ibsen</title>
+        <link rel="stylesheet" href="ibsen-handout-styles.css">
+        <script src="ibsen-handout-scripts.js" defer></script>
+</head>
+<body>
+    <div class="card title">
+        <h1>Henrik Ibsen: The Father of Modern Drama</h1>
+        <img src="330px-Henrik_Ibsen_av_Eilif_Peterssen_1895.jpg" alt="Henrik Ibsen Portrait" />
+    </div>
+
+    <div class="card">
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'Biography')" id="defaultOpen">Biography</button>
+            <button class="tablinks" onclick="openTab(event, 'Works')">Works</button>
+            <button class="tablinks" onclick="openTab(event, 'Interactive')">Activities</button>
+        </div>
+
+        <div id="Biography" class="tabcontent">
+            <h3>Early Life Timeline</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <strong>1828</strong>: Born in Skien, Norway
+                </div>
+                <div class="timeline-item">
+                    <strong>1835</strong>: Family's financial collapse
+                </div>
+                <div class="timeline-item">
+                    <strong>1843</strong>: Pharmacist apprenticeship
+                </div>
+                <div class="timeline-item">
+                    <strong>1849</strong>: First play "Catiline"
+                </div>
+            </div>
+            
+            <h3>Ibsen's Travels</h3>
+            <div class="map-container" id="travelMap">
+                <div class="map-point" style="top: 30%; left: 20%" onclick="showMapInfo('norway')"></div>
+                <div class="map-point" style="top: 45%; left: 40%" onclick="showMapInfo('germany')"></div>
+                <div class="map-point" style="top: 60%; left: 30%" onclick="showMapInfo('italy')"></div>
+                <div class="map-info" id="mapInfo"></div>
+            </div>
+        </div>
+
+        <div id="Works" class="tabcontent">
+            <h3>Major Plays</h3>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>A Doll's House (1879)</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Revolutionary play about women's rights and marriage norms</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Famous Quotes</h3>
+            <div class="audio-player">
+                <p>"A thousand words will not leave so deep an impression as one deed."</p>
+            </div>
+        
+        <h3>External Resources</h3>
+        <ul>
+            <li><a href="https://www.gutenberg.org/ebooks/author/2733" target="_blank">Henrik Ibsen on Project Gutenberg</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Henrik_Ibsen" target="_blank">Henrik Ibsen on Wikipedia</a></li>
+            <li><a href="https://www.britannica.com/biography/Henrik-Ibsen" target="_blank">Henrik Ibsen on Britannica</a></li>
+        </ul>
+        </div>
+
+
+        <div id="Interactive" class="tabcontent">
+            <h3>Test Your Knowledge</h3>
+            <!-- <div class="progress-container">
+                <div id="quiz-progress" class="progress-bar">0%</div>
+            </div> -->
+            
+            <div class="quiz-container">
+                <h4>Question 1:</h4>
+                <div class="quiz-option" onclick="verifyAnswer(this, true)">
+                    Ibsen was born in 1828
+                </div>
+                <div class="quiz-option" onclick="verifyAnswer(this, false)">
+                    Ibsen was born in 1838
+                </div>
+                <h4>Question 2:</h4>
+                <div class="quiz-option" onclick="verifyAnswer(this, true)">
+                    Ibsen is known for his play "A Doll's House"
+                </div>
+                <div class="quiz-option" onclick="verifyAnswer(this, false)">
+                    Ibsen is known for his play "The Glass Menagerie"
+                </div>
+                <h4>Question 3:</h4>
+                <div class="quiz-option" onclick="verifyAnswer(this, true)">
+                    Ibsen's play "Hedda Gabler" was first published in 1890
+                </div>
+                <div class="quiz-option" onclick="verifyAnswer(this, false)">
+                    Ibsen's play "Hedda Gabler" was first published in 1870
+                </div>
+                <h4>Question 4:</h4>
+                <div class="quiz-option" onclick="verifyAnswer(this, true)">
+                    Ibsen was a Norwegian playwright
+                </div>
+                <div class="quiz-option" onclick="verifyAnswer(this, false)">
+                    Ibsen was a Swedish playwright
+                </div>
+                <h4>Question 5:</h4>
+                <div class="quiz-option" onclick="verifyAnswer(this, true)">
+                    Ibsen's works were heavily influenced by realism
+                </div>
+                <div class="quiz-option" onclick="verifyAnswer(this, false)">
+                    Ibsen's works were heavily influenced by romanticism
+                </div>
+            </div>
+            
+
+            <h3>Match the Themes</h3>
+            <div id="draggables">
+                <div class="draggable" draggable="true" ondragstart="drag(event)" id="drag1">A Doll's House</div>
+                <div class="draggable" draggable="true" ondragstart="drag(event)" id="drag2">Peer Gynt</div>
+                <div class="draggable" draggable="true" ondragstart="drag(event)" id="drag3">Hedda Gabler</div>
+            </div>
+            
+            <div class="drop-zone" id="dropZone1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+                <p>Drop social criticism plays here</p>
+            
+            <div class="drop-zone" id="dropZone2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <p>Drop fantasy plays here</p>
+            
+            <h3>Study Flashcards</h3>
+            <div class="flashcard" onclick="toggleFlashcard(this)">
+                <div class="flashcard-question">What was Ibsen's first profession?</div>
+                <div class="flashcard-answer">Apprentice pharmacist in Grimstad</div>
+            </div>
+            <div class="flashcard" onclick="toggleFlashcard(this)">
+                <div class="flashcard-question">Which of Ibsen's plays is considered a pioneer of modern realism?</div>
+                <div class="flashcard-answer">A Doll's House</div>
+            </div>
+            <div class="flashcard" onclick="toggleFlashcard(this)">
+                <div class="flashcard-question">When did Henrik Ibsen pass away?</div>
+                <div class="flashcard-answer">1906</div>
+            </div>
+            <div class="flashcard" onclick="toggleFlashcard(this)">
+                <div class="flashcard-question">What is the central theme of Ibsen's play "Ghosts"?</div>
+                <div class="flashcard-answer">The consequences of past sins and inherited guilt</div>
+            </div>            
+        </div>
+    </div>
+
+</body>
+</html>
